@@ -3,7 +3,7 @@
 """
 Created on Tue Feb 15 15:40:58 2022
 
-@author: nikolinerehn
+@author: group 
 """
 # %%
 # Load packages
@@ -14,7 +14,7 @@ from scipy.linalg import svd
 
 # %%
 # Load data and remove rows with NA
-data = pd.read_csv('marketing.data.txt', sep=",", header=None)[0].tolist() 
+data = pd.read_csv('../Data/marketing.data', sep=",", header=None)[0].tolist() 
 
 for i in range(len(data)):
     data[i] = data[i].split()
@@ -71,9 +71,13 @@ annualIncomeMarker = ['Less than \$10,000',
                       '\$75,000 or more']
 
 
+#
+
+
+
 # %%
 # Principal Component Analysis
-
+'''
 # Subtract mean value from data
 Y = X - np.ones((N,1))*X.mean(axis=0)
 
@@ -106,7 +110,7 @@ plt.title(attributeNames[i])
 plt.yticks([1.5,2.5,3,4,5,6,7,8,9],annualIncomeMarker,fontsize=10)
 plt.show()
 
-
+'''
 
 
 
