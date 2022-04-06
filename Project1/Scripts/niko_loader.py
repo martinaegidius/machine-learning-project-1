@@ -77,12 +77,14 @@ annualIncomeMarker = ['Less than \$10,000',
 
 # %%
 # Principal Component Analysis
-'''
+
 # Subtract mean value from data
+
 Y = X - np.ones((N,1))*X.mean(axis=0)
 
 # PCA by computing SVD of Y
 U,S,V = svd(Y,full_matrices=False)
+
 
 # Compute variance explained by principal components
 rho = (S*S) / (S*S).sum() 
@@ -110,7 +112,13 @@ plt.title(attributeNames[i])
 plt.yticks([1.5,2.5,3,4,5,6,7,8,9],annualIncomeMarker,fontsize=10)
 plt.show()
 
-'''
+
+
+#%% analyzing Principal components
+Vp = V.T
+
+
+
 
 
 
